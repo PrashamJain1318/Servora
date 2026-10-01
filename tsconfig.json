@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./packages/config/tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@servora/config": ["packages/config/src/index.ts"],
+      "@servora/types": ["packages/types/src/index.ts"],
+      "@servora/validation": ["packages/validation/src/index.ts"],
+      "@servora/ui": ["packages/ui/src/index.tsx"]
+    }
+  },
+  "exclude": ["node_modules", "dist", ".next", "coverage"]
+}
