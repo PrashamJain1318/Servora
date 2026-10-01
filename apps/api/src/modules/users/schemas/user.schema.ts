@@ -62,6 +62,12 @@ export class User extends Document {
   })
   globalRole!: GlobalRole;
 
+  @Prop({
+    type: Boolean,
+    default: true,
+  })
+  isActive?: boolean;
+
   createdAt!: Date;
   updatedAt!: Date;
 }

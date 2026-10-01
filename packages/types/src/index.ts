@@ -68,3 +68,25 @@ export interface TenantContextData {
   userId?: string;
   role?: MembershipRole | string;
 }
+
+/**
+ * Verified Authentication Context from Clerk + Servora Database
+ */
+export interface AuthContext {
+  userId: string;
+  externalAuthId: string;
+  email: string;
+  globalRole: GlobalRole;
+  organizationId?: string;
+  role?: MembershipRole;
+}
+
+/**
+ * Structure of a Clerk Webhook event payload verified via Svix
+ */
+export interface ClerkWebhookEvent<T = Record<string, unknown>> {
+  data: T;
+  object: 'event';
+  type: string;
+  timestamp: number;
+}

@@ -11,6 +11,7 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@clerk/nextjs": "^7.9.8",
     "@servora/config": "workspace:*",
     "@servora/types": "workspace:*",
     "@servora/ui": "workspace:*",
